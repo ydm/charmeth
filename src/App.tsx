@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Background from "./components/Background";
+import Simple from "./components/Simple";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,9 +31,10 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <div id="opa">
-        asd
+        qwe
       </div>
       <Background />
+      <Simple />
     </>
   );
 }
