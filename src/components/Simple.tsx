@@ -1,10 +1,11 @@
 import React from 'react';
 import { mainnet } from "viem/chains";
-import { useAccount, useConnect, useDisconnect, useBalance, Connector, useChainId } from 'wagmi';
+import { useAccount, useDisconnect, useBalance, Connector, useChainId } from 'wagmi';
+import { useConnect } from "../hooks/useConnect";
 // import
 
 const Simple: React.FC = (_props: {}): React.ReactNode => {
-    const { address, isConnected } = useAccount();
+    const { address, isConnected, chainId } = useAccount();
     const { connect, connectors } = useConnect();
     const { disconnect } = useDisconnect();
     const { data: balance } = useBalance({ address });
@@ -15,7 +16,7 @@ const Simple: React.FC = (_props: {}): React.ReactNode => {
             <div>
                 <div>Connected to {address}</div>
                 <div>Balance: {"" + (balance?.value ?? 0)} ETH</div>
-                <div>Chain ID: {chainID}</div>
+                <div>Chain ID: {chainId}, {chainID}</div>
                 <button onClick={() => disconnect()}>Disconnect</button>
             </div>
         );
@@ -27,7 +28,7 @@ const Simple: React.FC = (_props: {}): React.ReactNode => {
                 <button key={connector.id} onClick={() => connect({
                     chainId: mainnet.id, connector
                 })}>
-                    Connect with {connector.name}
+                    Connect with {connector.name} {connector.uid} {connector.}
                 </button>
             ))}
         </div>

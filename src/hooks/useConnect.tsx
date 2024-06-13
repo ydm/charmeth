@@ -1,10 +1,10 @@
-import { PropsWithChildren, createContext, useContext, useEffect } from 'react';
+import { ReactNode, FC, PropsWithChildren, createContext, useContext, useEffect } from 'react';
 import { UserRejectedRequestError } from 'viem';
 import { ResolvedRegister, UseConnectReturnType, useConnect as useConnectWagmi, useDisconnect } from 'wagmi';
 
 const ConnectionContext = createContext<UseConnectReturnType<ResolvedRegister['config']> | undefined>(undefined);
 
-export function ConnectionProvider({ children }: PropsWithChildren) {
+export const ConnectionProvider: FC<PropsWithChildren> = ({ children }: PropsWithChildren): ReactNode => {
     const { disconnect } = useDisconnect();
 
     const connection = useConnectWagmi({
@@ -28,22 +28,27 @@ export function ConnectionProvider({ children }: PropsWithChildren) {
     });
 
     useEffect(() => {
+        console.log("useEffect: connection.isPending =", connection.isPending);
         if (connection.isPending) {
             connection.reset();
             disconnect();
         }
     }, [connection, disconnect]);
 
-    return <ConnectionContext.Provider value={connection}> {children} </ConnectionContext.Provider>;
-}
+    return (
+        <ConnectionContext.Provider value={connection}>
+            {children}
+        </ConnectionContext.Provider>
+    );
+};
 
 /**
  * Wraps wagmi.useConnect in a singleton provider to provide the same connect state to all callers.
  * @see {@link https://wagmi.sh/react/api/hooks/useConnect}
         */
-export function useConnect() {
-    const value = useContext(ConnectionContext);
-    if (!value) {
+export function useConnect(): UseConnectReturnType {
+    const value: UseConnectReturnType | undefined = useContext(ConnectionContext);
+    if (value == null) {
         throw new Error('useConnect must be used within a ConnectionProvider');
     }
     return value;
