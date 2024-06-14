@@ -4,6 +4,10 @@ import App from './App.tsx';
 import './index.css';
 import Web3Provider from "./components/Web3Provider/index.tsx";
 
+if (window.ethereum) {
+  window.ethereum.autoRefreshOnNetworkChange = false
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Web3Provider>

@@ -5,7 +5,7 @@ import { createConfig, http } from "wagmi";
 
 import * as chains from "../../constants/chains";
 import { PARAMS } from "./walletConnect";
-// import { injectedWithFallback } from "./injectedWithFallback";
+import { injectedWithFallback } from "./injectedWithFallback";
 
 declare module 'wagmi' {
   interface Register {
@@ -13,10 +13,14 @@ declare module 'wagmi' {
   }
 }
 
+const inj = injectedWithFallback();
+console.log("inj:", inj);
+
 export const wagmiConfig = createConfig({
     chains: [chains.MAINNET, chains.HOLESKY],
     connectors: [
-        // injectedWithFallback(),
+        injectedWithFallback(),
+
         metaMask({
             preferDesktop: true,
         }),
