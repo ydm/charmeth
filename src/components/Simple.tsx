@@ -28,7 +28,7 @@ const Simple: React.FC = (_props: {}): React.ReactNode => {
                 <button key={connector.id} onClick={() => connect({
                     chainId: mainnet.id, connector
                 })}>
-                    Connect with {connector.name} {connector.uid} {connector.}
+                    Connect with {connector.name} {connector.uid}
                 </button>
             ))}
         </div>
