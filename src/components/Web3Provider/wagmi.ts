@@ -1,7 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import { coinbaseWallet, metaMask, walletConnect } from "wagmi/connectors";
 import { createClient } from "viem";
-import { createConfig, http } from "wagmi";
+import { Connector, CreateConnectorFn, createConfig, http } from "wagmi";
 
 import * as chains from "../../constants/chains";
 import { PARAMS } from "./walletConnect";
@@ -15,12 +15,12 @@ declare module 'wagmi' {
 
 const inj = injectedWithFallback();
 console.log("inj:", inj);
+inj.name
 
-export const wagmiConfig = createConfig({
-    chains: [chains.MAINNET, chains.HOLESKY],
-    connectors: [
+function makeConfig() {
+    const connectors: CreateConnectorFn[] = [];
+    const pool: CreateConnectorFn[] = [
         injectedWithFallback(),
-
         metaMask({
             preferDesktop: true,
         }),
@@ -29,16 +29,30 @@ export const wagmiConfig = createConfig({
             reloadOnDisconnect: false,
         }),
         walletConnect(PARAMS),
-    ],
-    client({ chain }) {
-        return createClient({
-            chain,
-            batch: { multicall: true },
-            pollingInterval: 12_000,
-            transport: http(chain.rpcUrls.appOnly.http[0]),
-        });
-    },
-});
+    ];
+    pool.map((connector: CreateConnectorFn) => {
+        // TODO
+        if (true || !connectors.some(x => x.name == connector.name)) {
+            console.log("PUSHING", connector.name, connector);
+            connectors.push(connector);
+        }
+    });
+
+    return createConfig({
+        chains: [chains.MAINNET, chains.HOLESKY],
+        connectors,
+        client({ chain }) {
+            return createClient({
+                chain,
+                batch: { multicall: true },
+                pollingInterval: 12_000,
+                transport: http(chain.rpcUrls.appOnly.http[0]),
+            });
+        },
+    });
+}
+
+export const wagmiConfig = makeConfig();
 
 export const queryClient = new QueryClient();
 
