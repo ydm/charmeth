@@ -12,12 +12,14 @@
   "dependencies": {
     "@ethersproject/providers": "^5.7.2",
     "@tanstack/react-query": "^5.45.0",
+    "bootstrap": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "viem": "2.x",
     "wagmi": "^2.10.2"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

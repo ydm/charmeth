@@ -1,6 +1,5 @@
 import React from 'react';
-import { mainnet } from "viem/chains";
-import { useAccount, useDisconnect, useBalance, Connector, useChainId } from 'wagmi';
+import { useAccount, useDisconnect, useBalance, Connector } from 'wagmi';
 import { useConnect } from "../hooks/useConnect";
 import { useEthersProvider } from '../hooks/useEthersProvider';
 import { Web3Provider } from '@ethersproject/providers';
@@ -13,7 +12,9 @@ const Simple: React.FC = (_props: {}): React.ReactNode => {
     const { data: balance } = useBalance({ address: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" });
     const provider: Web3Provider | undefined = useEthersProvider({ chainId });
 
+    console.log("HERE", !!provider);
     provider?.getBalance("0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045").then(console.log);
+    provider?.getBalance("0x2d0764bbe17c0EdB77D14061D5B73a550AC45CbA").then(console.log);
 
     if (isConnected) {
         return (
@@ -28,9 +29,15 @@ const Simple: React.FC = (_props: {}): React.ReactNode => {
 
     return (
         <div>
+            <button onClick={() => connect({
+                chainId, connector: connectors[0],
+            })}>
+                Connect with your {connectors[0].name} Wallet
+            </button>
             {connectors.map((connector: Connector) => (
                 <button key={connector.id} onClick={() => connect({
-                    chainId: mainnet.id, connector
+                    chainId,
+                    connector,
                 })}>
                     Connect with {connector.name} {connector.uid}
                 </button>

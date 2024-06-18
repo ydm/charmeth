@@ -18,9 +18,9 @@ declare module 'wagmi' {
 function makeConfig() {
     const connectors: CreateConnectorFn[] = [
         injectedWithFallback(),
-        // metaMask({
-        //     preferDesktop: true,
-        // }),
+        metaMask({
+            preferDesktop: true,
+        }),
         coinbaseWallet({
             appName: 'CharmETH',
             reloadOnDisconnect: false,

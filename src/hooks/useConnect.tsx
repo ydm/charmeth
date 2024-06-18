@@ -1,5 +1,5 @@
 import { ReactNode, FC, PropsWithChildren, createContext, useContext, useEffect } from 'react';
-import { Chain, UserRejectedRequestError } from 'viem';
+import { UserRejectedRequestError } from 'viem';
 import { ResolvedRegister, UseConnectReturnType, useConnect as useConnectWagmi, useDisconnect } from 'wagmi';
 
 const ConnectionContext = createContext<UseConnectReturnType<ResolvedRegister['config']> | undefined>(undefined);
