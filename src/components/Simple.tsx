@@ -11,11 +11,11 @@ const Simple: React.FC = (_props: {}): React.ReactNode => {
     const { disconnect } = useDisconnect();
     const { data: balance } = useBalance({ address: "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" });
     const provider: Web3Provider | undefined = useEthersProvider({ chainId });
-
-    console.log("HERE", !!provider);
-    provider?.getBalance("0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045").then(console.log);
-    provider?.getBalance("0x2d0764bbe17c0EdB77D14061D5B73a550AC45CbA").then(console.log);
-
+    if (!1) {
+        console.log("HERE", !!provider);
+    }
+    // provider?.getBalance("0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045").then(console.log);
+    // provider?.getBalance("0x2d0764bbe17c0EdB77D14061D5B73a550AC45CbA").then(console.log);
     if (isConnected) {
         return (
             <div>

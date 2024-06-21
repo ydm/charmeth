@@ -8,14 +8,25 @@ import Navbar from "./components/Navbar";
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className="bg-dark text-white">
       <Navbar />
-
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <p className="display-1 balsamiq-sans-regular">
+              Have a lucky (CHARM)!
+              <br />
+              (CHARM) is an ERC-20 token written in Lisp.
+            </p>
+          </div>
+        </div>
+      </div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -41,7 +52,7 @@ function App() {
       </div>
       <Background />
       <Simple />
-    </>
+    </div>
   );
 }
 
