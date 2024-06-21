@@ -7,19 +7,18 @@ export default function Jumbotron(): React.ReactElement {
             <div className="container">
                 <div className="row">
                     <div className="col text-center">
-                        <span className="display-4">It's dangerous to go alone!</span>
-                        <br />
-                        <br />
-                        <br />
-                        <button className="bg-transparent p-4 text-decoration-none text-white charm-jumbotron-take">
-                            <span className="display-2">
-                                Take a lucky <br />
-                                <Charm />
-                            </span>
-                        </button>
-                        <br />
-                        <br />
-                        <span className="shantell-sans-regular">↑ click me</span>
+                        <p className="display-4">It's dangerous to go alone!</p>
+                        <p className="pt-3">
+                            <button className="bg-transparent p-4 text-decoration-none text-white charm-jumbotron-take">
+                                <span className="display-2">
+                                    Take a lucky <br />
+                                    <Charm />
+                                </span>
+                            </button>
+                        </p>
+                        <p>
+                            <span className="shantell-sans-regular">↑ click me</span>
+                        </p>
                     </div>
                 </div>
             </div>
