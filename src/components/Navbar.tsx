@@ -1,31 +1,38 @@
 import React from 'react';
 import { useAccount } from 'wagmi';
 import { getChainName, isSupportedChain } from "../constants/chains";
+import Charm from "./Charm";
 
 const Navbar: React.FC = (_props: {}): React.ReactNode => {
     const { isConnected, chainId } = useAccount();
-    const supported: boolean = isSupportedChain(chainId ?? 0);
-    const networkClassName: string = supported ? "small" : "small charm-underline-wavy";
-    const networkTooltip: string = supported ? "" : "choose either mainnet or holesky";
-    const name: string = getChainName(chainId ?? 0);
-    let network: string = isConnected ? "unsupported-network" : "";
-    if (name && name.length > 0) {
-        network = `${name} ${chainId}`;
+
+    let children: React.ReactElement = <></>;
+    if (isConnected) {
+        if (isSupportedChain(chainId ?? 0)) {
+            children = (
+                <>
+                    <span>&nbsp;'</span>
+                    <span>{getChainName(chainId ?? 0)}</span>
+                </>
+            );
+        } else {
+            children = (
+                <>
+                    <span>&nbsp;'</span>
+                    <span className="charm-underline-wavy" title="connect to either mainnet or holesky">{"chain" + chainId}</span>
+                </>
+            );
+        }
     }
+
     return (
-        <header className="mb-4" style={{ paddingBottom: "3.5rem" }}>
+        <header>
             <div className="navbar navbar-dark bg-dark box-shadow fixed-top charm-header-border">
                 <div className="container d-flex justify-content-between">
                     <a className="navbar-brand balsamiq-sans-regular" href="#">
-                        <span style={{ color: "#6ea8fe" }}>(</span>
-                        <span style={{ color: "" }}>
-                            CHARM
-                            &nbsp;
-                            <span className="text-warning small">'(</span>
-                            <span className={networkClassName} title={networkTooltip}>{network}</span>
-                            <span className="text-warning small" style={{ color: "#6ea8fe" }}>)</span>
-                        </span>
-                        <span style={{ color: "#6ea8fe" }}>)</span>
+                        <Charm>
+                            {children}
+                        </Charm>
                     </a>
                     <a href="https://github.com">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" className="bi bi-github" viewBox="0 0 16 16">
@@ -34,7 +41,7 @@ const Navbar: React.FC = (_props: {}): React.ReactNode => {
                     </a>
                 </div>
             </div>
-        </header>
+        </header >
     );
 };
 

@@ -1,0 +1,66 @@
+.balsamiq-sans-regular {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.balsamiq-sans-bold {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.balsamiq-sans-regular-italic {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.balsamiq-sans-bold-italic {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.charm-jumbotron {
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
+
+    /* background: linear-gradient(135deg, rgba(182, 23, 23, 0.8), rgba(58, 74, 44, 0.8)),
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 1) 100%),
+        radial-gradient(circle at 20% 80%, #5aa9d9 0%, rgba(64, 50, 212, 0.8) 60%, rgb(171, 30, 30) 100%),
+        radial-gradient(circle at 80% 20%, #9a9192 0%, rgba(135, 43, 43, 0.8) 60%, rgba(141, 51, 185, 1) 100%),
+        radial-gradient(circle at 30% 10%, #e1c6f4 0%, rgba(170, 26, 124, 0.8) 60%, rgba(231, 31, 51, 1) 100%);
+    background-blend-mode: saturation; */
+    /* background: linear-gradient(135deg, rgba(255, 204, 128, 0.8), rgba(255, 160, 122, 0.8)),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(255, 204, 128, 0.5) 70%, rgba(255, 160, 122, 1) 100%),
+        radial-gradient(circle at 25% 75%, #5ce2ba 0%, rgba(255, 204, 128, 0.8) 50%, rgba(255, 160, 122, 1) 100%),
+        radial-gradient(circle at 75% 25%, #875091 0%, rgba(255, 204, 128, 0.8) 50%, rgba(255, 160, 122, 1) 100%),
+        radial-gradient(circle at 0% 0%, #3e9b5f 0%, rgba(255, 204, 128, 0.8) 50%, rgba(255, 160, 122, 1) 100%),
+        radial-gradient(circle at 100% 100%, #ff2e0f 0%, rgba(255, 204, 128, 0.8) 50%, rgba(255, 160, 122, 1) 100%); */
+    background: linear-gradient(135deg, rgba(123, 104, 238, 0.8), rgba(255, 20, 147, 0.8)),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(173, 216, 230, 0.5) 70%, rgba(34, 139, 34, 1) 100%),
+        radial-gradient(circle at 25% 75%, #e33e32 0%, rgba(255, 105, 180, 0.8) 50%, rgba(138, 43, 226, 1) 100%),
+        radial-gradient(circle at 75% 25%, #ae1ae3 0%, rgba(0, 191, 255, 0.8) 50%, rgba(218, 165, 32, 1) 100%),
+        radial-gradient(circle at 0% 0%, #73271d 0%, rgba(75, 0, 130, 0.8) 50%, rgba(255, 69, 0, 1) 100%),
+        radial-gradient(circle at 100% 100%, #7048c6 0%, rgba(0, 255, 127, 0.8) 50%, rgba(255, 99, 71, 1) 100%);
+    background-blend-mode: soft-light;
+}
+
+.charm-jumbotron-take {
+    border: 0.25rem dashed rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+}
+
+.charm-underline-wavy {
+    text-decoration: underline wavy #50fc5e;
+}
+
+.charm-header-border {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
+    /* position: absolute;
+    margin-top: 3.5rem; */
+}

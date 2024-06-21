@@ -4,7 +4,7 @@
     font-style: normal;
 }
 
-/* .balsamiq-sans-bold {
+.balsamiq-sans-bold {
     font-family: "Balsamiq Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -20,24 +20,26 @@
     font-family: "Balsamiq Sans", sans-serif;
     font-weight: 700;
     font-style: italic;
-} */
-
-.shantell-sans-regular {
-  font-family: "Shantell Sans", cursive;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "BNCE" 0,
-    "INFM" 0,
-    "SPAC" 0;
 }
 
 .charm-jumbotron {
-    padding: 5.5rem 0 2rem 0;
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid;
     border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
 
+    /* background: linear-gradient(135deg, rgba(120, 97, 168, 0.88), rgba(120, 97, 168, 0.88)),
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(104, 97, 141, 0.72) 70%, rgba(0, 0, 0, 1) 100%),
+        radial-gradient(circle at 20% 80%, #4a5769 0%, rgba(50, 48, 114, 0.81) 60%, rgb(171, 30, 30) 100%),
+        radial-gradient(circle at 80% 20%, #a39933 0%, rgba(138, 127, 71, 0.85) 60%, rgba(141, 51, 185, 1) 100%),
+        radial-gradient(circle at 30% 10%, #8169a2 0%, rgba(66, 81, 94, 0.56) 60%, rgba(231, 31, 51, 1) 100%);
+    background-blend-mode: saturation; */
+    /* background: linear-gradient(135deg, rgba(81, 60, 63, 0.88), rgba(81, 60, 63, 0.88)),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(99, 161, 78, 0.76) 70%, rgba(255, 160, 122, 1) 100%),
+        radial-gradient(circle at 25% 75%, #398dab 0%, rgba(143, 136, 138, 0.9) 50%, rgba(255, 160, 122, 1) 100%),
+        radial-gradient(circle at 75% 25%, #8d6d5b 0%, rgba(80, 175, 76, 0.8) 50%, rgba(255, 160, 122, 1) 100%),
+        radial-gradient(circle at 0% 0%, #a3762f 0%, rgba(140, 148, 113, 0.77) 50%, rgba(255, 160, 122, 1) 100%),
+        radial-gradient(circle at 100% 100%, #5e7656 0%, rgba(66, 71, 165, 0.59) 50%, rgba(255, 160, 122, 1) 100%); */
     background: linear-gradient(135deg, rgba(110, 143, 130, 0.73), rgba(110, 143, 130, 0.73)),
         radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(100, 146, 130, 0.63) 70%, rgba(34, 139, 34, 1) 100%),
         radial-gradient(circle at 25% 75%, #454c34 0%, rgba(51, 108, 128, 0.53) 50%, rgba(138, 43, 226, 1) 100%),
@@ -48,17 +50,12 @@
 }
 
 .charm-jumbotron-take {
-    border: 0.25rem dashed rgba(255, 255, 255, 0.75);
+    border: 0.25rem dashed rgba(70, 106, 162, 0.5);
     border-radius: 1rem;
-    filter: drop-shadow(0 0 0.75rem crimson);
-}
-
-.charm-jumbotron span {
-    filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.2));
 }
 
 .charm-underline-wavy {
-    text-decoration: underline wavy #9b2e37;
+    text-decoration: underline wavy #458c3c;
 }
 
 .charm-header-border {
@@ -66,8 +63,4 @@
     border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
     /* position: absolute;
     margin-top: 3.5rem; */
-}
-
-.navbar-brand {
-    filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.05));
 }
