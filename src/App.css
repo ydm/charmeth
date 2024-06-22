@@ -4,24 +4,6 @@
     font-style: normal;
 }
 
-/* .balsamiq-sans-bold {
-    font-family: "Balsamiq Sans", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.balsamiq-sans-regular-italic {
-    font-family: "Balsamiq Sans", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.balsamiq-sans-bold-italic {
-    font-family: "Balsamiq Sans", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-} */
-
 .shantell-sans-regular {
   font-family: "Shantell Sans", cursive;
   font-optical-sizing: auto;
@@ -34,7 +16,8 @@
 }
 
 .charm-jumbotron {
-    padding: 5.5rem 0 2rem 0;
+    /* padding: 5.5rem 0 2rem 0; */
+    padding: 2rem 0;
     border-bottom: 1px solid;
     border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
 
@@ -51,6 +34,10 @@
     border: 0.25rem dashed rgba(255, 255, 255, 0.75);
     border-radius: 1rem;
     filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+button.charm-jumbotron-take:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .charm-jumbotron span {

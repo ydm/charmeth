@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="bg-dark text-white">
-      <Navbar />
       <Jumbotron />
       <br />
       <br />

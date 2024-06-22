@@ -1,7 +1,10 @@
 import React from 'react';
 import Charm from "./Charm";
+import { useAccount } from "wagmi";
 
 export default function Jumbotron(): React.ReactElement {
+    // const { isConnected, chainId } = useAccount();
+
     return (
         <div className="charm-jumbotron">
             <div className="container">
