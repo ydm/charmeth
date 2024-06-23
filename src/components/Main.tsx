@@ -11,7 +11,8 @@ import metamaskImage from "../assets/metamask.png";
 import coinbaseImage from "../assets/coinbase.png";
 import walletConnectImage from "../assets/wallet-connect.png";
 import disconnectImage from "../assets/disconnect.png";
-import editor from "../assets/editor.png";
+import editor from "../assets/editor.jpg";
+import gnu from "../assets/gnu.jpg";
 import lawsuit from "../assets/lawsuit.jpg";
 
 export default function Main(): React.ReactElement {
@@ -105,10 +106,8 @@ export default function Main(): React.ReactElement {
             </div>
 
             <div className="row">
-                <div className="col-lg text-center">
-                    <p className="pt-2 fs-5 pb-sm-4 pb-md-4 pb-lg-0">
-                        <TakeButton />
-                    </p>
+                <div className="col-lg pt-2 fs-5 pb-sm-4 pb-md-4 pb-lg-0">
+                    <img className="img-fluid rounded-4" src={gnu} />
                 </div>
                 <div className="col-lg">
                     <h2 className="text-center text-lg-start pb-2">
@@ -125,7 +124,7 @@ export default function Main(): React.ReactElement {
                     </p>
                     <br />
                     <p className="pt-2 fs-5 text-center text-lg-start">
-                        2. Click on the big button
+                        2. Click on the big button above
                     </p>
                 </div>
             </div>
