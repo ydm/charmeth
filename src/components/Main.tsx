@@ -12,6 +12,7 @@ import coinbaseImage from "../assets/coinbase.png";
 import walletConnectImage from "../assets/wallet-connect.png";
 import disconnectImage from "../assets/disconnect.png";
 import { getChainName } from "../constants/chains";
+import TakeButton from "./TakeButton";
 
 export default function Main(): React.ReactElement {
     const { address, isConnected, chainId } = useAccount();
@@ -68,7 +69,7 @@ export default function Main(): React.ReactElement {
         <div className="container">
             <div className="row">
                 <div className="col-lg">
-                    <h2 className="">
+                    <h2 className="text-center text-lg-start">
                         <img className="rounded-1" style={{ verticalAlign: "middle", height: "1.31258em" }} src={lawsuit} />
                         <small>&nbsp;:</small>
                         &nbsp;
@@ -76,7 +77,7 @@ export default function Main(): React.ReactElement {
                     </h2>
                     <p className="pt-4 fs-5">
                         <Charm /> is an ERC-20 token written in <b>Mist</b>, a Lisp-like
-                        language designed for Ethereum smart contracts, similar to Solidity.
+                        language designed for Ethereum smart contracts, just like Solidity.
                     </p>
                     <p className="pt-2 fs-5">
                         <Charm /> embodies the belief that well-crafted code brings good karma and luck.
@@ -86,16 +87,10 @@ export default function Main(): React.ReactElement {
                         Since luck doesn't cost any money, <Charm /> can be obtained for free.
                     </p>
                     <p className="pt-2 fs-5">
-                        Learn more about <b>Mist</b>
-                        &nbsp;
-                        <a href="https://github.com/ydm/mist">here</a>,
-
-                        or read the full source code of <Charm />
-                        &nbsp;
-                        <a href="https://github.com/ydm/mist/blob/master/examples/charm.mist">here</a>.
+                        Learn more about <b>Mist</b> <a href="https://github.com/ydm/mist">here</a>, or check out the full source code of the token <a href="https://github.com/ydm/mist/blob/master/examples/charm.mist">here</a>.
                     </p>
-                    <p className="pt-2 fs-5 pb-sm-4 pb-lg-0">
-                        <Charm /> is deployed on <a href="#">Mainnet</a> and <a href="#">Holesky</a>.
+                    <p className="pt-2 fs-5 pb-sm-4 pb-md-4 pb-lg-0">
+                        <Charm /> is deployed on <a href="https://etherscan.io/token/0x2dC39D09C1A3850d3a3c9907b51AEe7217771Fb7">Mainnet</a> and <a href="https://holesky.etherscan.io/address/0x79772dbc1adbee7c5488229d8021e9e2304ce8af">Holesky</a>.
                     </p>
                 </div>
                 <div className="col-lg">
@@ -112,30 +107,26 @@ export default function Main(): React.ReactElement {
 
             <div className="row">
                 <div className="col-lg text-center">
-                    <button className="bg-transparent p-4 text-decoration-none text-white charm-jumbotron-take">
-                        <span className="display-2">
-                            Take a lucky <br />
-                            <Charm />
-                        </span>
-                    </button>
+                    <p className="pt-2 fs-5 pb-sm-4 pb-md-4 pb-lg-0">
+                        <TakeButton />
+                    </p>
                 </div>
                 <div className="col-lg">
-                    <h2 className="">
+                    <h2 className="text-center text-lg-start pb-2">
                         <img className="rounded-1" style={{ verticalAlign: "middle", height: "1.31258em" }} src={lawsuit} />
                         <small>&nbsp;:</small>
                         &nbsp;
                         But how to get one?
                     </h2>
-                    <p className="pt-4 fs-5">
-                        <span className="font-monospace">{stepOneCheck}</span> 1. Connect your wallet
+                    <p className="pt-4 fs-5 text-center text-lg-start">
+                        1. Connect your wallet
                     </p>
-                    <p>
-                        <span className="font-monospace">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <p className="text-sm-center text-center text-lg-start">
                         {stepOne}
                     </p>
                     <br />
-                    <p className="pt-2 fs-5">
-                        <span className="font-monospace">&nbsp;</span> 2. Click the "Take a lucky <Charm />" button
+                    <p className="pt-2 fs-5 text-center text-lg-start">
+                        2. Click on the big button
                     </p>
                 </div>
             </div>

@@ -1,5 +1,5 @@
-import INJECTED_LIGHT_ICON from '/vite.svg'; // TODO
-import METAMASK_ICON from '/vite.svg'; // TODO
+import INJECTED_LIGHT_ICON from '/metamask.png';
+import METAMASK_ICON from '/metamask.png';
 import { createConnector } from 'wagmi';
 import { injected } from 'wagmi/connectors';
 
