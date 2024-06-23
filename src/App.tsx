@@ -1,5 +1,3 @@
-import Simple from "./components/Simple";
-import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 import Main from "./components/Main";
 

@@ -1,18 +1,18 @@
 import React from 'react';
+import { useAccount, useDisconnect } from 'wagmi';
 
-import editor from "../assets/editor.png";
-import lawsuit from "../assets/lawsuit.jpg";
-import Charm from "./Charm";
-
-import { useAccount, useDisconnect, useBalance, Connector } from 'wagmi';
+import { getChainName } from "../constants/chains";
 import { useConnect } from "../hooks/useConnect";
+
+import Charm from "./Charm";
+import TakeButton from "./TakeButton";
 
 import metamaskImage from "../assets/metamask.png";
 import coinbaseImage from "../assets/coinbase.png";
 import walletConnectImage from "../assets/wallet-connect.png";
 import disconnectImage from "../assets/disconnect.png";
-import { getChainName } from "../constants/chains";
-import TakeButton from "./TakeButton";
+import editor from "../assets/editor.png";
+import lawsuit from "../assets/lawsuit.jpg";
 
 export default function Main(): React.ReactElement {
     const { address, isConnected, chainId } = useAccount();
@@ -22,7 +22,6 @@ export default function Main(): React.ReactElement {
 
     const label: string = ("" + address).substring(0, 10) + "…@" + getChainName(chainId ?? 0);
 
-    const stepOneCheck: JSX.Element = isConnected ? (<>✓</>) : (<>&nbsp;</>);
     const stepOne = isConnected
         ? (
             <button type="button" className="btn btn-outline-danger" onClick={() => disconnect()}>

@@ -1,12 +1,13 @@
-import React, { useState, useReducer, Reducer, Dispatch } from 'react';
+import React, { useReducer, Dispatch } from 'react';
+import { useAccount } from 'wagmi';
+import { TransactionReceipt, TransactionResponse, Web3Provider } from '@ethersproject/providers';
 
 import * as chains from "../constants/chains";
-import Charm from "./Charm";
-
-import { useAccount, useDisconnect, useBalance, Connector } from 'wagmi';
 import { useConnect } from "../hooks/useConnect";
 import { useEthersProvider } from '../hooks/useEthersProvider';
-import { TransactionReceipt, TransactionResponse, Web3Provider } from '@ethersproject/providers';
+
+import Charm from "./Charm";
+
 
 interface Status {
     status: "not available" | "waiting for signature ..." | "waiting for confirmation ..." | "success" | "rejected";
@@ -23,7 +24,7 @@ function getTokenAddress(chainId: number): string {
         case chains.HOLESKY.id:
             return "0x79772DBc1adbEe7c5488229d8021E9e2304cE8af";
         case chains.MAINNET.id:
-            return "0x79772DBc1adbEe7c5488229d8021E9e2304cE8af";
+            return "0x2dC39D09C1A3850d3a3c9907b51AEe7217771Fb7";
         default:
             return "0xdead";
     }
