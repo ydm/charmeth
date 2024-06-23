@@ -26,7 +26,6 @@
 }
 
 .charm-jumbotron {
-    /* padding: 5.5rem 0 2rem 0; */
     padding: 2rem 0;
     border-bottom: 1px solid;
     border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
@@ -48,19 +47,4 @@ button.charm-jumbotron-take:hover {
 
 .charm-shadow {
     filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.2));
-}
-
-.charm-underline-wavy {
-    text-decoration: underline wavy #9b2e37;
-}
-
-.charm-header-border {
-    border-bottom: 1px solid;
-    border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet) 1;
-    /* position: absolute;
-    margin-top: 3.5rem; */
-}
-
-.navbar-brand {
-    filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.05));
 }
