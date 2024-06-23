@@ -23,7 +23,7 @@ export default function Main(): React.ReactElement {
                             &nbsp;·&nbsp;
                             <a className="text-secondary" href="https://etherscan.io/token/0x2dC39D09C1A3850d3a3c9907b51AEe7217771Fb7">Mainnet deployment</a>
                             &nbsp;·&nbsp;
-                            <a className="text-secondary" href="https://holesky.etherscan.io/address/0x79772dbc1adbee7c5488229d8021e9e2304ce8af">Holesky deployment</a>
+                            <a className="text-secondary" href="https://holesky.etherscan.io/token/0x79772dbc1adbee7c5488229d8021e9e2304ce8af">Holesky deployment</a>
                         </div>
                     </div>
                 </div>
