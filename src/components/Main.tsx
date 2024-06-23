@@ -86,10 +86,10 @@ export default function Main(): React.ReactElement {
                         Since luck doesn't cost any money, <Charm /> can be obtained for free.
                     </p>
                     <p className="pt-2 fs-5">
-                        Learn more about <b>Mist</b> <a href="https://github.com/ydm/mist">here</a>, or check out the full source code of the token <a href="https://github.com/ydm/mist/blob/master/examples/charm.mist">here</a>.
+                        Learn more about <b>Mist</b> <a className="text-warning" href="https://github.com/ydm/mist">here</a>, or check out the full source code of the token <a className="text-warning" href="https://github.com/ydm/mist/blob/master/examples/charm.mist">here</a>.
                     </p>
                     <p className="pt-2 fs-5 pb-sm-4 pb-md-4 pb-lg-0">
-                        <Charm /> is deployed on <a href="https://etherscan.io/token/0x2dC39D09C1A3850d3a3c9907b51AEe7217771Fb7">Mainnet</a> and <a href="https://holesky.etherscan.io/address/0x79772dbc1adbee7c5488229d8021e9e2304ce8af">Holesky</a>.
+                        <Charm /> is deployed on <a className="text-warning" href="https://etherscan.io/token/0x2dC39D09C1A3850d3a3c9907b51AEe7217771Fb7">Mainnet</a> and <a className="text-warning" href="https://holesky.etherscan.io/address/0x79772dbc1adbee7c5488229d8021e9e2304ce8af">Holesky</a>.
                     </p>
                 </div>
                 <div className="col-lg">

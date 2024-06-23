@@ -7,7 +7,7 @@ export default function Main(): React.ReactElement {
                 <div className="row">
                     <div className="col">
                         <div className="text-secondary text-center mt-4 small">
-                            © 2024 Copyright: <a href="https://github.com/ydm">ydm@github</a>
+                            © 2024 Copyright: <a className="text-secondary" href="https://github.com/ydm">ydm@github</a>
                         </div>
                     </div>
                 </div>
