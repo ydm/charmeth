@@ -5,7 +5,6 @@ import { getChainName } from "../constants/chains";
 import { useConnect } from "../hooks/useConnect";
 
 import Charm from "./Charm";
-import TakeButton from "./TakeButton";
 
 import metamaskImage from "../assets/metamask.png";
 import coinbaseImage from "../assets/coinbase.png";
